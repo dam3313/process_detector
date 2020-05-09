@@ -29,11 +29,51 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxACC = new System.Windows.Forms.TextBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "ACC actif";
+            // 
+            // textBoxACC
+            // 
+            this.textBoxACC.Location = new System.Drawing.Point(70, 10);
+            this.textBoxACC.Name = "textBoxACC";
+            this.textBoxACC.Size = new System.Drawing.Size(359, 20);
+            this.textBoxACC.TabIndex = 1;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(456, 52);
+            this.Controls.Add(this.textBoxACC);
+            this.Controls.Add(this.label1);
+            this.Name = "Form1";
+            this.Text = "ACC Detector";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBoxACC;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
