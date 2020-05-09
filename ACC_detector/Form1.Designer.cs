@@ -30,8 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBoxACC = new System.Windows.Forms.TextBox();
+            this.textBoxSave = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -39,31 +41,51 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(13, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 13);
+            this.label1.Size = new System.Drawing.Size(69, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "ACC actif";
+            this.label1.Text = "save modifier";
             // 
-            // textBoxACC
+            // textBoxSave
             // 
-            this.textBoxACC.Location = new System.Drawing.Point(70, 10);
-            this.textBoxACC.Name = "textBoxACC";
-            this.textBoxACC.Size = new System.Drawing.Size(359, 20);
-            this.textBoxACC.TabIndex = 1;
+            this.textBoxSave.Location = new System.Drawing.Point(88, 10);
+            this.textBoxSave.Name = "textBoxSave";
+            this.textBoxSave.Size = new System.Drawing.Size(341, 20);
+            this.textBoxSave.TabIndex = 1;
             // 
             // timer1
             // 
             this.timer1.Enabled = true;
+            this.timer1.Interval = 500;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(16, 55);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(413, 20);
+            this.textBox1.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(13, 39);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(178, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "App interdite vue en fonctionnement";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(456, 52);
-            this.Controls.Add(this.textBoxACC);
+            this.ClientSize = new System.Drawing.Size(456, 92);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBoxSave);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "ACC Detector";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -72,8 +94,10 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBoxACC;
+        private System.Windows.Forms.TextBox textBoxSave;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label2;
     }
 }
 
